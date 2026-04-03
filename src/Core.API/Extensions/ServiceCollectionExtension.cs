@@ -1,8 +1,14 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddJwt(this IServiceCollection services, IConfiguration config)
     {
         var jwtSettings = config.GetSection("JwtSettings").Get<JwtSettings>();
+
+        if (jwtSettings == null) throw new Exception("JWT settings are not configured properly.");
 
         var key = Encoding.ASCII.GetBytes(jwtSettings.Key);
 

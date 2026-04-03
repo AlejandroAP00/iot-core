@@ -1,38 +1,89 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "Core.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Core.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Application.dll": {}
+        }
+      },
+      "Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Core.Application/1.0.0": {
+      "type": "project",
+      "path": "../Core.Application/Core.Application.csproj",
+      "msbuildProject": "../Core.Application/Core.Application.csproj"
+    },
+    "Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Core.Domain/Core.Domain.csproj",
+      "msbuildProject": "../Core.Domain/Core.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "Core.Application >= 1.0.0",
+      "Core.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "/home/aayala/.nuget/packages/": {}
+    "C:\\Users\\jesus\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/aayala/Documents/Proyectos/net/Core.Infrastructure/Core.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Infrastructure\\Core.Infrastructure.csproj",
       "projectName": "Core.Infrastructure",
-      "projectPath": "/home/aayala/Documents/Proyectos/net/Core.Infrastructure/Core.Infrastructure.csproj",
-      "packagesPath": "/home/aayala/.nuget/packages/",
-      "outputPath": "/home/aayala/Documents/Proyectos/net/Core.Infrastructure/obj/",
+      "projectPath": "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Infrastructure\\Core.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/aayala/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Application\\Core.Application.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Application\\Core.Application.csproj"
+            },
+            "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Domain\\Core.Domain.csproj": {
+              "projectPath": "C:\\Users\\jesus\\source\\repos\\AlejandroAP00\\iot-core\\src\\Core.Domain\\Core.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -45,7 +96,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
@@ -66,7 +117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
