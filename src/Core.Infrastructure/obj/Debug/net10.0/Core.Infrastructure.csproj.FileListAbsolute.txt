@@ -16,3 +16,4 @@ C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.Infrastructure\obj\D
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.Infrastructure\obj\Debug\net10.0\refint\Core.Infrastructure.dll
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.Infrastructure\obj\Debug\net10.0\Core.Infrastructure.pdb
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.Infrastructure\obj\Debug\net10.0\ref\Core.Infrastructure.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.Infrastructure\bin\Debug\net10.0\appsettings.json

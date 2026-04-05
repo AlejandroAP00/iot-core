@@ -7,7 +7,8 @@ public class Authentication
     public required String Password { get; set; }
     public required String PhoneNumber { get; set; }
 
+    public required Guid UserId { get; set; }
+
     public  String? SecretKey { get; set; }
 
-    readonly DateOnly UpdatedAt;
 }

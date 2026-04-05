@@ -49,3 +49,13 @@ C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\obj\Debug\net10.
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\obj\Debug\net10.0\Core.API.pdb
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\obj\Debug\net10.0\Core.API.genruntimeconfig.cache
 C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\obj\Debug\net10.0\ref\Core.API.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+C:\Users\jesus\source\repos\AlejandroAP00\iot-core\src\Core.API\bin\Debug\net10.0\Serilog.Sinks.File.dll

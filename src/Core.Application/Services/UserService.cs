@@ -1,4 +1,5 @@
-﻿using Core.Application.Interfaces;
+﻿using Core.Application.DTOs;
+using Core.Application.Interfaces;
 using Core.Domain.Entities;
 
 namespace Core.Application.Services;
@@ -12,7 +13,7 @@ public class UserService
     }
 
 
-    public async Task CreateUser( Guid id, bool isAdmin, bool isVerified, string firstName, string lastName, string picture)
+    public async Task<UserDto> CreateUser( Guid id, bool isAdmin, bool isVerified, string firstName, string lastName, string picture)
     {
         var user = new User
         {
@@ -28,6 +29,10 @@ public class UserService
                 UpdatedAt = DateTime.UtcNow
             }
         };
-        await _repo.Add(user);
+        User? response = await _repo.Add(user);
+
+        if (response == null) throw new Exception("Failed to create user");
+
+        return UserDto.fromEntity(response);
     }
 }

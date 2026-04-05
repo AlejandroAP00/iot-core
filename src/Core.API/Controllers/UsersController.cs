@@ -8,24 +8,29 @@ namespace Core.API.Controllers;
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
+    private readonly ILogger<UsersController> _logger;
     private readonly UserService _userService;
 
-    public UsersController(UserService userService)
+    public UsersController( ILogger<UsersController> logger, UserService userService)
     {
         _userService = userService;
+        _logger =  logger;
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateUserDto createUserData)
+    [ProducesResponseType(typeof(UserDto), StatusCodes.Status200OK)]
+    public async Task<ActionResult<UserDto>> Create([FromBody] CreateUserDto createUserData)
     {
-        await _userService.CreateUser(
+        _logger.LogInformation("Datos recibidos {@User}", createUserData);
+          var usercreatedUser = await _userService.CreateUser(
             id: Guid.NewGuid(),
             isAdmin: false,
             isVerified: false,
-            firstName: createUserData.firstName,
-            lastName: createUserData.lastName,
+            firstName: createUserData.FirstName,
+            lastName: createUserData.LastName,
             picture: "https://example.com/profile.jpg"
         );
-        return Ok();
+
+        return Ok(usercreatedUser);
     }
 }

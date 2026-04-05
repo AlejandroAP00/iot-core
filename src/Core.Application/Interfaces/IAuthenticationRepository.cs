@@ -1,16 +1,16 @@
-﻿using System;
+﻿using Core.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Application.Interfaces
+namespace Core.Application.Interfaces;
+
+public interface IAuthenticationRepository
 {
-    internal interface IAuthenticationRepository
-    {
 
-        bool doesPhoneNumberExist(String phoneNumber);
-        bool doesEmailExist(String email);
+    bool doesEmailExist(String email);
 
+    bool login(String email, String password);
 
-
-    }
+    public Task<Authentication?> GetAuthenticationByUserEmail(String email);
 }
